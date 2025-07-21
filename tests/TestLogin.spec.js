@@ -18,11 +18,14 @@ test('@Safal Verify login functionality', async ({ page }) => {
   })
 
   //Verify Login with correcct credentials
-
   await test.step('Verif login with correct username and password.', async () => {
     await loginAction.LoginToApplication(loginData.validUsername, loginData.validPassword);
-  
-  
+
+
+
+
+
+
     //await expect(this.positionLocator.locPositionHeading).toBeVisible();
     //await expect(page).toHaveURL('');
     //await loginAction.VerifyLoginWithCorrectUSernameAndPassword(loginData.)

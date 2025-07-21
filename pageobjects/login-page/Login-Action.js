@@ -26,10 +26,13 @@ class LoginAction {
         console.log("Clicked on Login button.");
 
         await this.page.waitForTimeout(3000);  // Wait for 3 seconds
-
-
-
     }
+
+//
+
+
+
+
 
 //Verify Logout Functionality Application
 //async verifyLogoutFunctionality() {   ///expected 
