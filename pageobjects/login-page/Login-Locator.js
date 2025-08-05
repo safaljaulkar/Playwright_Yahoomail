@@ -14,7 +14,9 @@ constructor(page){
         this.signOutButton =page.locator("//a[.//span[text()='Sign out']]");
          this.locSafaljProfileName = page.locator("//span[@role='presentation']");
 
-
+          this.locLoginPageLogo = page.locator("//img[@class='_yb_1e46uhr _yb_8v4lia']");
+          this.locUserProfileLabel= page.locator("//button//label[@id='ybarAccountMenuOpener']");
+          
 
 }
 }

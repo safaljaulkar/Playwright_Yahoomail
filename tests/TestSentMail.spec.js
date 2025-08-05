@@ -28,7 +28,8 @@ test('@Safal Verify Sent Mail functionality', async ({ page }) => {
 
     //Verify Reply on Sent mail functionality
     await test.step('Reply on sent Mail.', async () => {
-        await sentAction.navigateToSent(sentData.punchOutMail);
+           //  await sentAction.navigateToSent(sentData.punchInMail);
+     await sentAction.navigateToSent(sentData.punchOutMail);
 
 
     })

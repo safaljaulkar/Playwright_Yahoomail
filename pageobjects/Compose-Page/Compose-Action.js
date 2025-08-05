@@ -14,13 +14,12 @@ class ComposeAction {
       await this.composeLocator.locToMailId.click();
       await this.composeLocator.locToMailId.fill(mailID);
       await this.composeLocator.locSubject.fill(subject);
-     await this.composeLocator.locDraftMessage.fill(draftMail);
-      await this.composeLocator.locSendButton.click();
+     await this.composeLocator.locDraftMessage.type(draftMail);
+     // await this.composeLocator.locSendButton.click();
 
 
 
-      //await this.composeLocator.SentButton.click();
-
+      
    }
 }
 module.exports = { ComposeAction };

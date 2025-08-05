@@ -21,7 +21,11 @@ test('@Safal Verify login functionality', async ({ page }) => {
   await test.step('Verif login with correct username and password.', async () => {
     await loginAction.LoginToApplication(loginData.validUsername, loginData.validPassword);
 
+  })
 
+  //Verify Login page UI
+    await test.step('verify login page UI.', async () => {
+        await loginAction.LoginPageUI();
 
 
 
