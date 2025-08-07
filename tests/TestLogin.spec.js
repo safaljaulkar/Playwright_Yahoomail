@@ -18,14 +18,21 @@ test('@Safal Verify login functionality', async ({ page }) => {
   })
 
   //Verify Login with correcct credentials
-  await test.step('Verif login with correct username and password.', async () => {
-    await loginAction.LoginToApplication(loginData.validUsername, loginData.validPassword);
+  // await test.step('Verif login with correct username and password.', async () => {
+  //await loginAction.LoginToApplication(loginData.validUsername, loginData.validPassword);
+
+  // })
+
+  //Verify Login with invalid password
+  await test.step('Verify Login with invalid password.', async () => {
+    await loginAction.LoginToApplication(loginData.validUsername, loginData.invalidPassword);
+    await loginAction.verifyLoginWithInvalidPassword(loginData.warningInvalidPassword)
 
   })
 
   //Verify Login page UI
-    await test.step('verify login page UI.', async () => {
-        await loginAction.LoginPageUI();
+  await test.step('verify login page UI.', async () => {
+    await loginAction.LoginPageUI();
 
 
 
@@ -33,18 +40,14 @@ test('@Safal Verify login functionality', async ({ page }) => {
     //await expect(this.positionLocator.locPositionHeading).toBeVisible();
     //await expect(page).toHaveURL('');
     //await loginAction.VerifyLoginWithCorrectUSernameAndPassword(loginData.)
-
-  })
-
-
-
+  });
 
 
   /*
-     Verify Logout Application
-    await test.step('Verify Logout functionality.', async()=>{
-    await expect(page).toHaveURL('https://mail.turbify.com/login?reason=USER_LOGOUT');
-     })
-  */
+   Verify Logout Application
+  await test.step('Verify Logout functionality.', async()=>{
+  await expect(page).toHaveURL('https://mail.turbify.com/login?reason=USER_LOGOUT');
+   })
+*/
 
-});
+})
