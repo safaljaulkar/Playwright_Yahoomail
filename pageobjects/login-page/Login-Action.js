@@ -35,6 +35,14 @@ class LoginAction {
         await expect(warningMessage).toHaveText(locInvalidPasswordWarning);
         console.log("Verify warning message when valid username and invalid password.");
     }
+ //Verify Login with invalid password  
+    async verifyLoginWithInvalidPassword(locInvalidPasswordWarning) {
+        const warningMessage = await this.loginLocator.locInvalidPasswordWarning;
+        await expect(warningMessage).toBeVisible();
+        await expect(warningMessage).toHaveText(locInvalidPasswordWarning);
+        console.log("Verify warning message when valid username and invalid password.");
+
+
 
     //Verify Login page UI
   //  async LoginPageUI() {
